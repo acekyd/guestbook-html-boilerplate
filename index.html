@@ -30,10 +30,24 @@
 			    	    	Guests
 			    	  	</div>
 			    	</div>
-			    	<form class="ui form left aligned six column segment" action="" method="post">
-			    	  <div class="field">
-			    	    <label>Full Name</label>
-			    	    <input type="text" id="full-name" name="full-name" placeholder="Full Name">
+			    	<form class="ui form left aligned six column segment" action="" method="post" name="form" id="form">
+			    		<div class="ui visible success message">
+			    		  	<i class="close icon"></i>
+			    		  	<div class="header">
+			    		    	Your entry was successful.
+			    		  	</div>
+			    		  	<p>You are now a valid member of our guestbook.</p>
+			    		</div>
+			    		<div class="ui visible negative message">
+			    		  <i class="close icon"></i>
+			    		  <div class="header">
+			    		    We're sorry we can't record your entry
+			    		  </div>
+			    		  <p>An error occured</p>
+			    		</div>
+			    	  	<div class="field">
+			    	    	<label>Full Name</label>
+			    	    	<input type="text" id="fullname" name="fullname" placeholder="Full Name">
 			    	  </div>
 			    	  <div class="field">
 			    	    <label>Email</label>
@@ -41,15 +55,15 @@
 			    	  </div>
 			    	  <div class="field">
 			    	      <label>Comment</label>
-			    	      <textarea></textarea>
+			    	      <textarea name="comment" id="comment"></textarea>
 			    	  </div>
 			    	  <div class="field">
 			    	    <div class="ui checkbox">
-			    	      <input type="checkbox" name="agree" tabindex="0" class="hidden">
+			    	      <input type="checkbox" name="agree" id="agree" tabindex="0" class="hidden">
 			    	      <label for="agree">I agree to the Terms and Conditions</label>
 			    	    </div>
 			    	  </div>
-			    	  <button class="ui button" type="submit">Submit</button>
+			    	  <button class="ui submit button" type="submit">Submit</button>
 			    	</form>
 			    </div>
 			</div>
@@ -58,6 +72,24 @@
 	<script type="text/javascript">
 		$('.ui.checkbox')
 		  .checkbox()
+		;
+		$('.message .close')
+		  .on('click', function() {
+		    $(this)
+		      .closest('.message')
+		      .transition('fade')
+		    ;
+		  })
+		;
+		$('.ui.form')
+		  .form({
+		    fields: {
+		      fullname : 'empty',
+		      email   : 'email',
+		      comment  : 'empty',
+		      terms    : 'checked'
+		    }
+		  })
 		;
 	</script>
 </html>
