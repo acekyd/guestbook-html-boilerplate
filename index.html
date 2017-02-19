@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width">
+  		<title>Guestbook HTML Boilerplate</title>
+  		<script src="assets/jquery-3.1.1.min.js"></script>
+  		<script src="assets/semantic.min.js"></script>
+  		<link rel="stylesheet" type="text/css" class="ui" href="assets/semantic.min.css">
+	</head>
+
+	<body>
+		<div class="ui container menu">
+			<div class="header item">
+				My GuestBook
+			</div>
+			<a class="item" href="view.html">
+		    	View all Guests
+		  	</a>
+		</div>
+		<div class="ui raised very padded container segment">
+			<div class="ui centered grid">
+			    <div class="eight wide center aligned column">
+			    	<h1 style="margin-bottom: 0">Join Our Guestbook</h1>
+			    	<div class="ui statistic">
+			    	  	<div class="value">
+			    	    	5,550
+			    	  	</div>
+			    	  	<div class="label">
+			    	    	Guests
+			    	  	</div>
+			    	</div>
+			    	<form class="ui form left aligned six column segment" action="" method="post">
+			    	  <div class="field">
+			    	    <label>Full Name</label>
+			    	    <input type="text" id="full-name" name="full-name" placeholder="Full Name">
+			    	  </div>
+			    	  <div class="field">
+			    	    <label>Email</label>
+			    	    <input type="email" id="email" name="email" placeholder="Email Address">
+			    	  </div>
+			    	  <div class="field">
+			    	      <label>Comment</label>
+			    	      <textarea></textarea>
+			    	  </div>
+			    	  <div class="field">
+			    	    <div class="ui checkbox">
+			    	      <input type="checkbox" name="agree" tabindex="0" class="hidden">
+			    	      <label for="agree">I agree to the Terms and Conditions</label>
+			    	    </div>
+			    	  </div>
+			    	  <button class="ui button" type="submit">Submit</button>
+			    	</form>
+			    </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.ui.checkbox')
+		  .checkbox()
+		;
+	</script>
+</html>
