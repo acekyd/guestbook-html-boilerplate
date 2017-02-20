@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width">
+  		<title>Guestbook HTML Boilerplate</title>
+  		<script src="assets/jquery-3.1.1.min.js"></script>
+  		<script src="assets/semantic.min.js"></script>
+  		<link rel="stylesheet" type="text/css" class="ui" href="assets/semantic.min.css">
+	</head>
+
+	<body>
+		<div class="ui container menu">
+			<div class="header item">
+				My GuestBook
+			</div>
+			<a class="item" href="index.html">
+				Home
+			</a>
+			<a class="active item" href="view.html">
+		    	View all Guests
+		  	</a>
+		</div>
+		<div class="ui raised very padded container segment">
+			<div class="ui centered grid">
+			    <div class="ten wide column">
+			    	<h1 style="margin-bottom: 0">View all Guests</h1>
+			    	<div class="ui divided items">
+				    	<div class="item">
+				    	    <div class="content">
+				    	      	<a class="header">Abati "Ace" Adewale</a>
+				    	      	<div class="meta">
+				    	        	<span class="cinema">acekyd01@gmail.com</span>
+				    	      	</div>
+				    	      	<div class="description">
+				    	        	<p>Semi-Genius. Gamer. Full Stack Developer. Co-host @mintpodcast. Knowledge Seeker. Cavs 🏀. Marvel #MCU. Ace ♠ Developer.</p>
+				    	      	</div>
+				    	      	<div class="extra">
+				    	        	<a href="edit.html">
+				    	        		<button class="mini ui button">
+									  		Edit
+										</button>
+									</a>
+				    	        	<div class="ui right floated delete negative button">
+							          	Delete Entry
+							          	<i class="right trash outline icon"></i>
+							        </div>
+				    	      	</div>
+				    	    </div>
+				    	</div>
+				    	<div class="item">
+				    	    <div class="content">
+				    	      	<a class="header">Abati "Ace" Adewale</a>
+				    	      	<div class="meta">
+				    	        	<span class="cinema">acekyd01@gmail.com</span>
+				    	      	</div>
+				    	      	<div class="description">
+				    	        	<p>Semi-Genius. Gamer. Full Stack Developer. Co-host @mintpodcast. Knowledge Seeker. Cavs 🏀. Marvel #MCU. Ace ♠ Developer.</p>
+				    	      	</div>
+				    	      	<div class="extra">
+				    	        	<a href="edit.html">
+				    	        		<button class="mini ui button">
+									  		Edit
+										</button>
+									</a>
+				    	        	<div class="ui right floated delete negative button">
+							          	Delete Entry
+							          	<i class="right trash outline icon"></i>
+							        </div>
+				    	      	</div>
+				    	    </div>
+				    	</div>
+				    	<div class="item">
+				    	    <div class="content">
+				    	      	<a class="header">Abati "Ace" Adewale</a>
+				    	      	<div class="meta">
+				    	        	<span class="cinema">acekyd01@gmail.com</span>
+				    	      	</div>
+				    	      	<div class="description">
+				    	        	<p>Semi-Genius. Gamer. Full Stack Developer. Co-host @mintpodcast. Knowledge Seeker. Cavs 🏀. Marvel #MCU. Ace ♠ Developer.</p>
+				    	      	</div>
+				    	      	<div class="extra">
+				    	        	<a href="edit.html">
+				    	        		<button class="mini ui button">
+									  		Edit
+										</button>
+									</a>
+				    	        	<div class="ui right floated delete negative button">
+							          	Delete Entry
+							          	<i class="right trash outline icon"></i>
+							        </div>
+				    	      	</div>
+				    	    </div>
+				    	</div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+		<div class="ui small modal">
+		    <div class="header">
+		      Delete This Entry
+		    </div>
+		    <div class="content">
+		      <p>Are you sure you want to delete this entry?</p>
+		    </div>
+		    <div class="actions">
+		      <div class="ui negative button">
+		        No
+		      </div>
+		      <div class="ui positive right labeled icon button">
+		        Yes
+		        <i class="checkmark icon"></i>
+		      </div>
+		    </div>
+		  </div>
+	</body>
+	<script type="text/javascript">
+		$('.small.modal')
+		  .modal('attach events', '.delete.button', 'show');
+		;
+	</script>
+</html>
