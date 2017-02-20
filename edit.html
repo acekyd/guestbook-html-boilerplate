@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width">
+  		<title>Guestbook HTML Boilerplate</title>
+  		<script src="assets/jquery-3.1.1.min.js"></script>
+  		<script src="assets/semantic.min.js"></script>
+  		<link rel="stylesheet" type="text/css" class="ui" href="assets/semantic.min.css">
+	</head>
+
+	<body>
+		<div class="ui container menu">
+			<div class="header item">
+				My GuestBook
+			</div>
+			<a class="item" href="index.html">
+				Home
+			</a>
+			<a class="active item" href="view.html">
+		    	View all Guests
+		  	</a>
+		</div>
+		<div class="ui raised very padded container segment">
+			<div class="ui centered grid">
+			    <div class="eight wide center aligned column">
+			    	<h1 style="margin-bottom: 0">Edit Guest Entry</h1>
+			    	<form class="ui form left aligned six column segment" action="" method="post" name="form" id="form">
+			    		<div class="ui visible success message">
+			    		  	<i class="close icon"></i>
+			    		  	<div class="header">
+			    		    	Your edit was successful.
+			    		  	</div>
+			    		  	<p>You guestbook details have been updated.</p>
+			    		</div>
+			    		<div class="ui visible negative message">
+			    		  <i class="close icon"></i>
+			    		  <div class="header">
+			    		    We're sorry we can't update your entry
+			    		  </div>
+			    		  <p>An error occured</p>
+			    		</div>
+			    	  	<div class="field">
+			    	    	<label>Full Name</label>
+			    	    	<input type="text" id="fullname" name="fullname" placeholder="Full Name" value="Abati Adewale">
+			    	  </div>
+			    	  <div class="field">
+			    	    <label>Email</label>
+			    	    <input type="email" id="email" name="email" placeholder="Email Address" value ="acekyd01@gmail.com">
+			    	  </div>
+			    	  <div class="field">
+			    	      <label>Comment</label>
+			    	      <textarea name="comment" id="comment">This is a long comment and i am not really understanding. It's still short sha.</textarea>
+			    	  </div>
+			    	  <div class="field">
+			    	    <div class="ui checkbox">
+			    	      <input type="checkbox" name="agree" checked id="agree" tabindex="0" class="hidden">
+			    	      <label for="agree">I agree to the Terms and Conditions</label>
+			    	    </div>
+			    	  </div>
+			    	  <button class="ui submit button" type="submit">Submit</button>
+			    	</form>
+			    </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('.ui.checkbox')
+		  .checkbox()
+		;
+		$('.message .close')
+		  .on('click', function() {
+		    $(this)
+		      .closest('.message')
+		      .transition('fade')
+		    ;
+		  })
+		;
+		$('.ui.form')
+		  .form({
+		    fields: {
+		      fullname : 'empty',
+		      email   : 'email',
+		      comment  : 'empty',
+		      terms    : 'checked'
+		    }
+		  })
+		;
+	</script>
+</html>
