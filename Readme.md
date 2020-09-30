@@ -1,4 +1,4 @@
-#Guestbook Html Boilerplate
+#Guestbook Html Boilerplate withou any external front end framework
 
 It's simple. Learning a new tool or backend app?? Or trying out an app in this article -> [5 Web Project ideas to test your new coding skills](https://medium.com/@AceKYD/5-web-project-ideas-to-test-your-new-coding-skills-91a18f6a0d5c#.w2lza0xgb). 
 
